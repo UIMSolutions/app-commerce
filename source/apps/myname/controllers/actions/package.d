@@ -1,1 +1,1 @@
-module apps.myname.controllers.actions;
+module apps.commerce.controllers.actions;

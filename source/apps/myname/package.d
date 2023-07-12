@@ -1,4 +1,4 @@
-module apps.myname;
+module apps.commerce;
 
 mixin(ImportPhobos!());
 
@@ -18,16 +18,16 @@ public import uim.servers;
 public import langs.javascript;
 
 public {
-  import apps.myname.controllers;
-  import apps.myname.helpers;
-  import apps.myname.routers;
-  import apps.myname.tests;
-  import apps.myname.views;
+  import apps.commerce.controllers;
+  import apps.commerce.helpers;
+  import apps.commerce.routers;
+  import apps.commerce.tests;
+  import apps.commerce.views;
 }
 
-DApp mynameApp;
+DApp commerceApp;
 static this() {
-  App("mynameApp", "/apps/myname")
+  App("commerceApp", "/apps/commerce")
       .importTranslations()
       .addRoutes(
         Route("", HTTPMethod.GET, IndexPageController),
