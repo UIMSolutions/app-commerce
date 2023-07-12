@@ -1,10 +1,10 @@
-module apps.myname.views;
+module apps.commerce.views;
 
 public {
-  import apps.myname.views.components;
-  import apps.myname.views.forms;
-  import apps.myname.views.pages;
+  import apps.commerce.views.components;
+  import apps.commerce.views.forms;
+  import apps.commerce.views.pages;
 }
 
-public import apps.myname.views.error;
-public import apps.myname.views.index;
+public import apps.commerce.views.error;
+public import apps.commerce.views.index;

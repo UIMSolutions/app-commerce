@@ -1,18 +1,18 @@
-module apps.myname.views.index;
+module apps.commerce.views.index;
 
-import apps.myname;
+import apps.commerce;
 @safe:
 
-class DMYNAMEIndexView : DView {
-  mixin(ViewThis!("MYNAMEIndexView"));
+class DCOMMERCEIndexView : DView {
+  mixin(ViewThis!("COMMERCEIndexView"));
 
   override DH5Obj[] toH5(STRINGAA options = null) {
-    debugMethodCall(moduleName!DMYNAMEIndexView~":DMYNAMEIndexView("~this.name~")::toH5");
+    debugMethodCall(moduleName!DCOMMERCEIndexView~":DCOMMERCEIndexView("~this.name~")::toH5");
     super.toH5(options);
 
     return [
-      H5Div("APP myname -> Error")
+      H5Div("APP commerce -> Error")
     ].toH5;
   }
 }
-mixin(ViewCalls!("MYNAMEIndexView"));
+mixin(ViewCalls!("COMMERCEIndexView"));
