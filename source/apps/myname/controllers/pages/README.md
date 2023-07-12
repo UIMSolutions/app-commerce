@@ -1,1 +1,1 @@
-# Package 📦 apps.myname.controllers.pages
+# Package 📦 apps.commerce.controllers.pages
