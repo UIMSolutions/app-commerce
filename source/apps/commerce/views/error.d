@@ -3,15 +3,15 @@ module apps.commerce.views.error;
 import apps.commerce;
 @safe:
 
-class DCOMMERCEErrorView : DView {
-  mixin(ViewThis!("COMMERCEErrorView"));
+class DErrorView : DView {
+  mixin(ViewThis!("ErrorView"));
 
   override void beforeH5(STRINGAA options = null) {
     super.beforeH5(options);
   }
 
   override DH5Obj[] toH5(STRINGAA options = null) {
-    debugMethodCall(moduleName!DCOMMERCEErrorView~":DCOMMERCEErrorView("~this.name~")::toH5");
+    debugMethodCall(moduleName!DErrorView~":DErrorView("~this.name~")::toH5");
     super.toH5(options);
 
     return [
@@ -19,4 +19,4 @@ class DCOMMERCEErrorView : DView {
     ].toH5;
   }
 }
-mixin(ViewCalls!("COMMERCEErrorView"));
+mixin(ViewCalls!("ErrorView"));
