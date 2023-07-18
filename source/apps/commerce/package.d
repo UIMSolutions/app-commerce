@@ -28,7 +28,7 @@ public {
 DApp commerceApp;
 static this() {
   AppRegistry.register("apps.commerce", 
-    App("commerceApp", "/apps/commerce")
+    App("commerceApp", "apps/commerce")
       .importTranslations()
       .addRoutes(
         Route("", HTTPMethod.GET, IndexPageController),
