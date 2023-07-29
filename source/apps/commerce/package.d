@@ -2,8 +2,10 @@ module apps.commerce;
 
 mixin(ImportPhobos!());
 
-// Dub
-public import vibe.d;
+// External
+public {
+  import vibe.d;
+}
 
 // UIM
 public import uim.core;
@@ -27,12 +29,18 @@ public {
 
 DApp commerceApp;
 static this() {
-  AppRegistry.register("apps.commerce", 
-    App("commerceApp", "apps/commerce")
-      .importTranslations()
-      .addRoutes(
-        Route("", HTTPMethod.GET, IndexPageController),
-        Route("/", HTTPMethod.GET, IndexPageController)
-      )
+  auto myApp = App("commerceApp", "apps/commerce");
+
+  with (myApp) {
+    importTranslations;
+    addControllers([
+      "commerce.index": IndexPageController
+    ]);
+    addRoutes(
+      Route("", HTTPMethod.GET, controller("commerce.index")),
+      Route("/", HTTPMethod.GET, controller("commerce.index"))
     );
+  }
+
+  AppRegistry.register("apps.commerce", myApp);
 }
